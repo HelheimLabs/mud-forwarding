@@ -7,5 +7,3 @@ broadcast/
 
 # Ignore MUD deploy artifacts
 deploys/**/*.json
-
-src/codegen/

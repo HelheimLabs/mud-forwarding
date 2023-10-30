@@ -150,6 +150,9 @@ contract CoreSystem is System {
 
   function _recordScore(address player, uint256 level, uint256 value) internal {
     uint16 uuid = PlayerInfo.getUuid(player);
+    if (uuid == 0) {
+      return;
+    }
     RecordData memory record = Record.get(uuid);
     Record.set(uuid, RecordData({
       addr: player,
